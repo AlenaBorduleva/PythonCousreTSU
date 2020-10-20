@@ -1,15 +1,15 @@
 # Ввод данных
 n = input("Enter the number n: ")
-
+# осуществляем проверку
 try:
     int(n)
 except ValueError:
     print ("Not an integer")
 else:
-    if not 1 < int(n):
+    if  int(n) < 2:
         print("Incorrect value")
     else:
-        a = list(range(2, int(n) + 1))
+        a = list(range(2, int(n) + 1)) #создаём список, n+1 для того, чтобы захватить значение n
         for el in a:
             if el != 0:
                 for index in range (0, len(a)):
